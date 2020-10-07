@@ -17,7 +17,16 @@ namespace ASPCore.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            var a = new AlumnoModel();
+            a.Nombre = "Hector Omar";
+            a.App = "Nava";
+            a.Apm = "Gonzalez";
+            a.Carrera = "Informática";
+            a.FechaIngreso = DateTime.Now;
+            a.NC = "17030098";
+            a.Promedio = 9.19;
+
+            return View(a);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
