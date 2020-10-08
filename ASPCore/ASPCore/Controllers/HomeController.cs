@@ -12,11 +12,6 @@ namespace ASPCore.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
             var a = new AlumnoModel();
             a.Nombre = "Hector Omar";
             a.App = "Nava";
@@ -27,6 +22,13 @@ namespace ASPCore.Controllers
             a.Promedio = 9.19;
 
             return View(a);
+        }
+
+        public IActionResult Privacy()
+        {
+           
+
+            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
